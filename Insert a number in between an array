@@ -28,3 +28,11 @@ public class test2 {
         }
     }
 }
+
+/*
+Old Array
+11 22 44 55 0 0 0 0 0 0 
+New Array
+11 22 33 44 55 0 0 0 0 0 
+*/
+

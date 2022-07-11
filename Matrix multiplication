@@ -1,0 +1,61 @@
+package exam1;
+public class test6 {
+    int count=0;
+    public void matrixMultiplication(int[][] arr1,int[][] arr2){
+        int a1height = arr1.length,a1width = arr1[a1height-1].length;
+        int a2height = arr2.length,a2width = arr2[a2height-1].length;
+        int[][] arr3 = new int[a1height][a2width];
+        int i=0,j=0,k=0;
+        if(a1width == a2height){
+            count++;
+            System.out.println("\nMatric multiplication "+count);
+            for(i=0;i<a1height;i++){
+                for(j=0;j<a2width;j++){
+                    arr3[i][j]=0;
+                    for(k=0;k<a2height;k++){ 
+                        arr3[i][j]+=arr1[i][k]*arr2[k][j];
+                    }
+                    System.out.print(arr3[i][j]+" ");
+                }
+                System.out.println();
+            }
+        }
+        else{
+            System.out.println("This matrix cannot be multiplied");
+        }
+    }
+    public static void main(String[] args) {
+        test6 t = new test6();
+        int[][] arr1 = {
+            {1,2,3},
+            {4,5,6}};
+        int[][] arr2 = {
+            {10,11},
+            {20,21},
+            {30,31},
+        };
+        int[][] arr3 = {
+            {2,1,4},
+            {0,1,1}};
+        int[][] arr4 = {
+            {6,3,-1,0},
+            {1,1,0,4},
+            {-2,5,0,2},
+        };
+        t.matrixMultiplication(arr1,arr2);
+        t.matrixMultiplication(arr3,arr4);
+    }
+}
+
+/*
+Output:
+
+Matric multiplication 1
+140 146 
+320 335 
+
+Matric multiplication 2
+ 5 27 -2 12 
+-1  6  0  6 
+
+*/

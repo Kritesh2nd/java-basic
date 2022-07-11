@@ -34,6 +34,15 @@ public class test4 {
         for(i=0;i<bigArr.length;i++){
             System.out.print(bigArr[i]+" ");
         }
-        
     }
 }
+
+/*
+Output:
+Small array
+44 55 66 
+Old big array
+11 22 33 77 88 0 0 0 0 0 
+New big array
+11 22 33 44 55 66 77 88 0 0 
+*/

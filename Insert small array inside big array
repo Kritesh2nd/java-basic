@@ -1,0 +1,39 @@
+package exam1;
+public class test4 {
+    public static void main(String[] args) {
+//        In this program a small array with length = 3 is inserted in 4th position
+//        of big array, remaining numbers from 4th position of big array is pushed afterwards
+        int[] smallArr = new int[3],bigArr = new int[10];
+        int i=0,pos=4-1,smallArrayLen=smallArr.length,j=smallArrayLen-1;
+        bigArr[0] = 11;
+        bigArr[1] = 22;
+        bigArr[2] = 33;
+        bigArr[3] = 77;
+        bigArr[4] = 88;
+        smallArr[0] = 44;
+        smallArr[1] = 55;
+        smallArr[2] = 66;
+        System.out.println("Small array");
+        for(i=0;i<smallArr.length;i++){
+            System.out.print(smallArr[i]+" ");
+        }
+        System.out.println("\nOld big array");
+        for(i=0;i<bigArr.length;i++){
+            System.out.print(bigArr[i]+" ");
+        }
+        for(i=7;i>=0;i--){
+            if(i >= pos+smallArrayLen){
+                bigArr[i] = bigArr[i-smallArrayLen];
+           }
+            else if(i >= pos){
+               bigArr[i] = smallArr[j];
+               j--;
+            }
+        }
+        System.out.println("\nNew big array");
+        for(i=0;i<bigArr.length;i++){
+            System.out.print(bigArr[i]+" ");
+        }
+        
+    }
+}

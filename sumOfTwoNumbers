@@ -1,0 +1,14 @@
+package exam1;
+import java.util.*;
+public class test3 {
+    public static void main(String[] args) {
+        System.out.println("Input Output Example");
+        Scanner sc= new Scanner(System.in);
+        int a=0,b=0,c=0;
+        System.out.println("Enter a number");
+        a = sc.nextInt();
+        System.out.println("Enter a number");
+        b = sc.nextInt();
+        System.out.println("Sum of two numbers is "+(a+b));
+    }
+}
